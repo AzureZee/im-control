@@ -1,0 +1,23 @@
+[package]
+name = "im-switch"
+version = "1.0.0"
+edition = "2024"
+
+[dependencies]
+windows = { version = ">=0.59, <=0.62", features = [
+  "Win32_Foundation",
+  # "Win32_UI_Input_Ime",
+  "Win32_UI_Input_KeyboardAndMouse",
+  "Win32_UI_WindowsAndMessaging",
+  # "Win32_System_Threading",
+  # "Win32_System_ProcessStatus",
+  # "Win32_System_Diagnostics_Debug",
+  # "Win32_Graphics_Dwm",
+] }
+
+[profile.opt]
+codegen-units = 1
+inherits = "release"
+opt-level = "s"
+lto = "fat"
+panic = "abort"
