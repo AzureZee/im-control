@@ -94,7 +94,7 @@ fn set_window_ime_status(hwnd: HWND, status: ImeStatus) {
         SendMessageA(
             hwnd,
             WM_IME_CONTROL,
-            6, // IMC_GETOPENSTATUS
+            6, // IMC_SETOPENSTATUS
             if status { 1 } else { 0 },
         )
     };
