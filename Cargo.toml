@@ -26,8 +26,7 @@ features = [
   # "Win32_Graphics_Dwm",
 ]
 
-[profile.opt]
-inherits = "release"
+[profile.release]
 opt-level = "s"
 lto = "fat"
 panic = "abort"

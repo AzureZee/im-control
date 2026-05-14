@@ -1,2 +1,1 @@
-[alias]
-install-opt = "install --path . --profile opt"
+# [alias]

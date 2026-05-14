@@ -1,20 +1,29 @@
 # im-control
 
-[English version](README-EN.md)
+Windows IME (Input Method Editor) control tool for querying and switching input
+method status via command line.
 
-Windows IME (输入法编辑器) 控制工具，用于在命令行查询和切换输入法状态。
+## Features
 
-## 功能
+| Command | Description |
+|---------|-------------|
+| `imc get-im` | Get current input method ID (KLID) |
+| `imc set-im <klid>` | Switch to specified input method |
+| `imc get-status` | Get IME status (on/off) |
+| `imc set-status on/off` | Enable/disable IME |
 
-| 命令 | 说明 |
-|------|------|
-| `imc get-im` | 获取当前输入法 ID (KLID) |
-| `imc set-im <klid>` | 切换到指定输入法 |
-| `imc get-status` | 获取 IME 状态 (on/off) |
-| `imc set-status on/off` | 启用/禁用 IME |
+## Installation
 
-## 安装
+### from crate.io
 
-```bash
-cargo install-opt
+```sh
+cargo install im-control
+```
+
+### from source
+
+```sh
+git clone https://github.com/AzureZee/im-control.git
+cd im-control
+cargo install --path .
 ```
